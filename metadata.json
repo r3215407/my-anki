@@ -1,0 +1,8 @@
+{
+  "name": "小智错题本 - Smart Mistake Notebook",
+  "description": "A playful, AI-powered mistake notebook designed for students to track, learn, and master their academic challenges with a bubbly Duolingo-style interface.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
