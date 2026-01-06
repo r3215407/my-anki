@@ -43,36 +43,18 @@ const Settings: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-card-light dark:bg-card-dark rounded-2xl p-5 shadow-sm border-b-4 border-gray-200 dark:border-gray-800">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="material-symbols-outlined text-primary text-2xl">palette</span>
-          <h3 className="text-lg font-bold">外观主题</h3>
-        </div>
-        <div className="flex justify-between gap-2 px-2">
-          {['#f4c025', '#58cc02', '#1cb0f6', '#ce82ff'].map((color, i) => (
-            <label key={i} className="group relative flex flex-col items-center gap-2 cursor-pointer">
-              <input checked={i === 0} readOnly className="peer sr-only" name="theme" type="radio"/>
-              <div className="size-12 rounded-full border-4 border-transparent peer-checked:ring-2 peer-checked:ring-primary shadow-sm transition-all transform peer-checked:scale-110" style={{ backgroundColor: color }}>
-                {i === 0 && <span className="flex items-center justify-center h-full text-white material-symbols-outlined">check</span>}
-              </div>
-              <span className="text-xs font-medium text-gray-500">活力色</span>
-            </label>
-          ))}
-        </div>
-      </div>
-
       <div className="bg-card-light dark:bg-card-dark rounded-2xl p-5 shadow-sm border-b-4 border-gray-200 dark:border-gray-800 flex flex-col gap-4">
         <div className="flex items-center gap-2 mb-1">
           <span className="material-symbols-outlined text-primary text-2xl">settings</span>
           <h3 className="text-lg font-bold">偏好设置</h3>
         </div>
-        
+
         <div className="flex items-center justify-between">
           <div className="flex flex-col">
             <span className="text-base font-bold">深色模式</span>
             <span className="text-sm text-text-sub">护眼模式</span>
           </div>
-          <button 
+          <button
             onClick={toggleDarkMode}
             className={`relative inline-block w-14 h-8 align-middle transition duration-200 ease-in rounded-full ${isDarkMode ? 'bg-primary' : 'bg-gray-200 dark:bg-gray-700'}`}
           >
