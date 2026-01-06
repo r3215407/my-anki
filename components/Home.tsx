@@ -12,7 +12,6 @@ const Home: React.FC = () => {
     <div className="flex-1 flex flex-col gap-6 px-4 pb-24 page-transition overflow-y-auto no-scrollbar">
       {/* Top Header */}
       <div className="sticky top-0 z-50 flex items-center bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md pt-4 pb-2 justify-between">
-        <h2 className="text-xl font-extrabold leading-tight tracking-tight flex-1 text-center">我的超能力</h2>
         <button onClick={() => navigate('/settings')} className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
           <span className="material-symbols-outlined text-2xl">settings</span>
         </button>
@@ -22,12 +21,12 @@ const Home: React.FC = () => {
       <div className="flex flex-col items-center pt-4">
         <div className="relative mb-4">
           <div className="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold px-2 py-1 rounded-full animate-bounce">New!</div>
-          <img alt="Daily Achievement" className="w-32 h-32 rounded-full object-cover border-4 border-primary shadow-lg" src="https://picsum.photos/200/200?random=1"/>
+          <img alt="Daily Achievement" className="w-32 h-32 rounded-full object-cover border-4 border-primary shadow-lg" src="https://picsum.photos/200/200?random=1" />
         </div>
         <h1 className="tracking-tight text-[28px] font-black leading-tight text-center">
-          🌟 哇！你今天收集了<br/><span className="text-primary">{stats.energyPoints} 个能量</span>！
+          🌟 哇！你今天收集了<br /><span className="text-primary">{stats.energyPoints} 个能量</span>！
         </h1>
-        <p className="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 text-center">继续保持，你的大脑正在变强壮！💪</p>
+        {/* <p className="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 text-center">继续保持，你的大脑正在变强壮！💪</p> */}
       </div>
 
       {/* Stats Grid */}
@@ -88,7 +87,7 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      <button 
+      <button
         onClick={() => navigate('/learn')}
         className="w-full flex items-center justify-center gap-3 bg-primary hover:bg-[#e0b020] text-[#4d3b0b] font-black text-lg py-4 rounded-2xl shadow-btn-primary active:translate-y-1 active:shadow-none transition-all"
       >
