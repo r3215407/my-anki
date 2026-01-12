@@ -10,7 +10,7 @@ import Settings from './components/Settings';
 const Navigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  
+
   const navItems = [
     { path: '/', icon: 'menu_book', label: '学习' },
     { path: '/list', icon: 'book_2', label: '词库' },
@@ -23,12 +23,12 @@ const Navigation = () => {
       {navItems.map((item) => {
         const isActive = location.pathname === item.path;
         return (
-          <button 
+          <button
             key={item.path}
             onClick={() => navigate(item.path)}
             className={`flex flex-col items-center gap-1 transition-all w-16 group ${isActive ? 'text-primary' : 'text-gray-400 hover:text-primary'}`}
           >
-            {isActive && item.path === '/settings' ? (
+            {/* {isActive && item.path === '/settings' ? (
               <div className="absolute -top-12 bg-primary rounded-full p-3 border-4 border-background-light dark:border-background-dark shadow-bubbly animate-bounce">
                 <span className="material-symbols-outlined text-white text-3xl">person</span>
               </div>
@@ -36,7 +36,7 @@ const Navigation = () => {
               <span className={`material-symbols-outlined text-3xl ${isActive ? 'fill-current font-bold' : ''}`}>
                 {item.icon}
               </span>
-            )}
+            )} */}
             <div className={isActive && item.path === '/settings' ? 'h-8' : ''}></div>
             <span className="text-xs font-bold">{item.label}</span>
           </button>
