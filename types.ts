@@ -1,10 +1,7 @@
 
 export enum Category {
-  MATH = '数学',
   ENGLISH = '英语',
   CHINESE = '语文',
-  SCIENCE = '科学',
-  OTHER = '其他'
 }
 
 export enum Status {

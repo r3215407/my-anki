@@ -59,15 +59,15 @@ const Learn: React.FC = () => {
   }
 
   return (
-    <div className="flex-1 flex flex-col h-full bg-background-light dark:bg-background-dark overflow-hidden">
+    <div className="flex-1 flex flex-col min-h-screen bg-background-light dark:bg-background-dark overflow-hidden">
       {/* Top Nav */}
       <div className="p-4 flex items-center justify-between">
         <button onClick={() => navigate('/')} className="p-2 text-gray-400 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors">
           <span className="material-symbols-outlined text-3xl font-bold">close</span>
         </button>
         <div className="flex-1 h-3 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden mx-4 relative">
-          <div 
-            className="h-full bg-primary transition-all duration-500" 
+          <div
+            className="h-full bg-primary transition-all duration-500"
             style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
           ></div>
         </div>
@@ -77,7 +77,7 @@ const Learn: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col justify-center items-center px-5 pb-4 gap-6">
+      <div className="flex-1 flex flex-col justify-center items-center p-5 gap-6">
         <div className="w-full bg-card-light dark:bg-card-dark rounded-3xl border-2 border-gray-100 dark:border-gray-800 shadow-toy dark:shadow-toy-dark p-0 overflow-hidden flex flex-col items-stretch">
           <div className="relative aspect-video bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center p-6">
             <span className="material-symbols-outlined text-8xl text-primary/40">pest_control</span>
@@ -90,18 +90,18 @@ const Learn: React.FC = () => {
             </div>
 
             <div className="w-full bg-background-light dark:bg-background-dark/50 rounded-2xl p-4 text-center">
-               <p className="text-lg leading-relaxed font-medium italic">"{current.sentence}"</p>
+              <p className="text-lg leading-relaxed font-medium italic">"{current.sentence}"</p>
             </div>
 
             {aiText ? (
-               <div className="w-full bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-4 border-l-4 border-blue-400 text-sm animate-fade-in-up">
-                 <p className="font-bold text-blue-600 mb-1 flex items-center gap-1">
-                    <span className="material-symbols-outlined text-sm">smart_toy</span> AI解析
-                 </p>
-                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{aiText}</p>
-               </div>
+              <div className="w-full bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-4 border-l-4 border-blue-400 text-sm animate-fade-in-up">
+                <p className="font-bold text-blue-600 mb-1 flex items-center gap-1">
+                  <span className="material-symbols-outlined text-sm">smart_toy</span> AI解析
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{aiText}</p>
+              </div>
             ) : (
-              <button 
+              <button
                 onClick={handleAiExplain}
                 disabled={loadingAi}
                 className="text-primary-dark font-bold text-sm flex items-center gap-1 hover:underline active:scale-95 transition-all disabled:opacity-50"
@@ -114,14 +114,14 @@ const Learn: React.FC = () => {
       </div>
 
       {/* Bottom Actions */}
-      <div className="p-5 pb-8 grid grid-cols-2 gap-4">
-        <button 
+      <div className="p-5 pb-28 grid grid-cols-2 gap-4">
+        <button
           onClick={() => handleNext(false)}
           className="btn-press flex items-center justify-center h-14 bg-white dark:bg-gray-800 border-2 border-gray-100 dark:border-gray-700 rounded-2xl shadow-[0_4px_0_0_#e5e7eb] font-bold text-gray-500"
         >
           不认识
         </button>
-        <button 
+        <button
           onClick={() => handleNext(true)}
           className="btn-press flex items-center justify-center h-14 bg-primary border-b-0 rounded-2xl shadow-btn-primary font-black text-[#4d3b0b] relative overflow-hidden"
         >
