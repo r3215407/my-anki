@@ -51,7 +51,7 @@ const Add: React.FC = () => {
       <div className="flex flex-col items-center px-6 pt-2 pb-6">
         <div className="flex w-full items-center gap-4">
           <div className="w-24 h-24 shrink-0 overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-card border-2 border-gray-100 dark:border-gray-700 flex items-center justify-center p-2">
-             <span className="material-symbols-outlined text-6xl text-primary">psychology</span>
+            <span className="material-symbols-outlined text-6xl text-primary">psychology</span>
           </div>
           <div className="flex-1 relative bg-white dark:bg-gray-800 p-4 rounded-2xl rounded-tl-none shadow-card border-2 border-gray-100 dark:border-gray-700">
             <h1 className="text-lg font-bold leading-tight">今天学到了什么新词?</h1>
@@ -64,14 +64,14 @@ const Add: React.FC = () => {
         <div className="flex flex-col gap-2">
           <label className="text-gray-500 text-lg font-bold ml-1">生词 (Word)</label>
           <div className="flex w-full items-center rounded-2xl bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 focus-within:border-primary transition-all h-16 shadow-card overflow-hidden">
-            <input 
-              className="flex-1 bg-transparent border-none text-xl font-bold px-5 focus:ring-0" 
-              placeholder="例如：apple" 
+            <input
+              className="flex-1 bg-transparent border-none text-xl font-bold px-5 focus:ring-0"
+              placeholder="例如：apple"
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
-            <button className="h-full px-5 text-gray-400 border-l-2 border-gray-100 dark:border-gray-700">
+            <button className="flex items-center justify-center h-full px-5 text-gray-400 border-l-2 border-gray-100 dark:border-gray-700">
               <span className="material-symbols-outlined">mic</span>
             </button>
           </div>
@@ -80,9 +80,9 @@ const Add: React.FC = () => {
         <div className="flex flex-col gap-2">
           <label className="text-gray-500 text-lg font-bold ml-1">意思 (Meaning)</label>
           <div className="flex w-full items-center rounded-2xl bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 focus-within:border-primary transition-all h-16 shadow-card overflow-hidden">
-            <input 
-              className="flex-1 bg-transparent border-none text-lg font-medium px-5 focus:ring-0" 
-              placeholder="例如：苹果" 
+            <input
+              className="flex-1 bg-transparent border-none text-lg font-medium px-5 focus:ring-0"
+              placeholder="例如：苹果"
               type="text"
               value={meaning}
               onChange={(e) => setMeaning(e.target.value)}
@@ -94,7 +94,7 @@ const Add: React.FC = () => {
           <label className="text-gray-500 text-lg font-bold ml-1">科目 (Category)</label>
           <div className="flex gap-3 overflow-x-auto no-scrollbar py-1">
             {Object.values(Category).map(cat => (
-              <button 
+              <button
                 key={cat}
                 onClick={() => setCategory(cat)}
                 className={`shrink-0 px-6 py-3 rounded-xl border-b-4 font-bold text-sm transform active:translate-y-1 active:border-b-0 transition-all ${category === cat ? 'bg-primary border-primary-dark text-white' : 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-500'}`}
@@ -108,8 +108,8 @@ const Add: React.FC = () => {
         <div className="flex flex-col gap-2">
           <label className="text-gray-500 text-lg font-bold ml-1">例句 (Sentence)</label>
           <div className="rounded-2xl bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 focus-within:border-primary transition-all shadow-card overflow-hidden">
-            <textarea 
-              className="w-full bg-transparent border-none text-lg p-5 min-h-[120px] resize-none focus:ring-0 leading-relaxed" 
+            <textarea
+              className="w-full bg-transparent border-none text-lg p-5 min-h-[120px] resize-none focus:ring-0 leading-relaxed"
               placeholder="I eat an apple every day."
               value={sentence}
               onChange={(e) => setSentence(e.target.value)}
@@ -119,7 +119,7 @@ const Add: React.FC = () => {
       </div>
 
       <div className="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark flex justify-center max-w-md mx-auto z-50">
-        <button 
+        <button
           onClick={handleSave}
           className="w-full bg-primary hover:bg-[#ebba24] text-white text-xl font-black py-4 rounded-2xl shadow-[0_4px_0_0_#dca200] transform active:translate-y-[4px] active:shadow-none transition-all flex items-center justify-center gap-2 uppercase tracking-wide"
         >

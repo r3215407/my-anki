@@ -57,7 +57,7 @@ const List: React.FC = () => {
           <button
             key={f}
             onClick={() => setFilter(f as any)}
-            className={`snap-start flex-shrink-0 h-10 px-6 rounded-full font-bold shadow-bubbly border-2 active:scale-95 transition-all whitespace-nowrap ${filter === f ? 'bg-primary border-primary text-[#4d3b0b]' : 'bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 text-gray-500'}`}
+            className={`snap-start flex-shrink-0 h-8 px-4 rounded-full font-bold text-sm shadow-bubbly border-2 active:scale-95 transition-all whitespace-nowrap ${filter === f ? 'bg-primary border-primary text-[#4d3b0b]' : 'bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 text-gray-500'}`}
           >
             {f === 'all' ? '全部' : f}
           </button>
