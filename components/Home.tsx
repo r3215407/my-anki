@@ -23,33 +23,7 @@ const Home: React.FC = () => {
           <div className="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold px-2 py-1 rounded-full animate-bounce">New!</div>
           <img alt="Daily Achievement" className="w-32 h-32 rounded-full object-cover border-4 border-primary shadow-lg" src="https://picsum.photos/200/200?random=1" />
         </div>
-        {/* <h1 className="tracking-tight text-[28px] font-black leading-tight text-center"> */}
-        {/* 🌟 哇！你今天收集了<br /><span className="text-primary">{stats.energyPoints} 个能量</span>！ */}
-        {/* </h1> */}
-        {/* <p className="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 text-center">继续保持，你的大脑正在变强壮！💪</p> */}
       </div>
-
-      {/* Stats Grid */}
-      {/* <div className="grid grid-cols-3 gap-3">
-        <div className="flex flex-col items-center gap-1 rounded-2xl p-4 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 shadow-sm">
-          <span className="material-symbols-outlined text-2xl">psychology</span>
-          <p className="text-[10px] font-bold opacity-70 uppercase">脑力值</p>
-          <p className="text-xl font-black">{stats.energyPoints}</p>
-        </div>
-        <div className="flex flex-col items-center gap-1 rounded-2xl p-4 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 shadow-sm">
-          <span className="material-symbols-outlined text-2xl">local_fire_department</span>
-          <p className="text-[10px] font-bold opacity-70 uppercase">连胜</p>
-          <p className="text-xl font-black">{stats.streak}天</p>
-        </div>
-        <div onClick={() => navigate('/learn')} className="flex flex-col items-center gap-1 rounded-2xl p-4 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 shadow-sm border-2 border-transparent hover:border-green-300 transition-all cursor-pointer group">
-          <div className="relative">
-            <span className="material-symbols-outlined text-2xl group-hover:animate-bounce">water_drop</span>
-            <div className="absolute -top-1 -right-1 size-2.5 bg-red-500 rounded-full border-2 border-white dark:border-gray-800"></div>
-          </div>
-          <p className="text-[10px] font-bold opacity-70 uppercase">待复习</p>
-          <p className="text-xl font-black">{stats.totalReview}</p>
-        </div>
-      </div> */}
 
       {/* Garden Section */}
       <div className="flex flex-col gap-4">
@@ -84,6 +58,22 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
+
+          <div className="flex items-center gap-4 bg-white dark:bg-card-dark p-5 rounded-[28px] shadow-sm border border-gray-100 dark:border-gray-800">
+            <div className="size-12 rounded-2xl bg-[#F6FFED] dark:bg-green-900/20 flex items-center justify-center text-[#52C41A] shrink-0">
+              <span className="material-symbols-outlined text-3xl">local_florist</span>
+            </div>
+            <div className="flex-1">
+              <div className="flex justify-between items-center mb-2">
+                <p className="font-bold text-sm">已盛开 (已掌握)</p>
+                <span className="text-[10px] font-black bg-[#F6FFED] text-[#52C41A] px-2 py-0.5 rounded-full">{stats.totalMastered} 词</span>
+              </div>
+              <div className="h-2.5 w-full bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                <div className="h-full bg-gradient-to-r from-[#B7EB8F] to-[#52C41A] rounded-full shadow-[0_0_8px_rgba(183,235,143,0.5)]" style={{ width: '100%' }}></div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 

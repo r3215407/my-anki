@@ -6,6 +6,7 @@ import Learn from './components/Learn';
 import List from './components/List';
 import Add from './components/Add';
 import Settings from './components/Settings';
+import Statistics from './components/Statistics';
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const Navigation = () => {
   const navItems = [
     { path: '/', icon: 'menu_book', label: '学习' },
     { path: '/list', icon: 'book_2', label: '词库' },
-    { path: '/home', icon: 'bar_chart', label: '排行' },
+    { path: '/statistics', icon: 'bar_chart', label: '排行' },
     { path: '/settings', icon: 'person', label: '我的' }
   ];
 
@@ -48,7 +49,7 @@ const App: React.FC = () => {
       <div className="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-2xl overflow-x-hidden">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/statistics" element={<Statistics />} />
           <Route path="/learn" element={<Learn />} />
           <Route path="/list" element={<List />} />
           <Route path="/add" element={<Add />} />
